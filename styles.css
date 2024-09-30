@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:wght400;900&display=swap");
+
+@font-face {
+    font-family: 'MyWebFont';
+    src: url("https://fonts.googleapis.com/css?family=Montserrat");
+    font-display: swap;
+}
+
+* {
+    font-family: roboto, sans-serif;
+}
+
+.navbar {
+    /* background-color: #333; */
+    position: relative;
+    z-index: 999;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar li a {
+    color: #2d2d2d;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    background-color: #bdbdbd;
+    z-index: 1;
+    min-width: 144px;
+}
+
+/* Style the dropdown menu */
+.navbar ul ul {
+    position: absolute;
+    top: 100%;
+    display: none;
+
+}
+
+.navbar ul ul li {
+    display: block;
+}
+
+.navbar li:hover ul {
+    display: block;
+}
+
+/* Change the background color of dropdown links on hover */
+.navbar ul ul li a:hover {
+    background-color: #555;
+}
+
+.header h1{
+    text-align: center;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.main{
+    text-align: center;
+    font-size: large;
+}
+
+a{color:#696969}
+a:visited{color:#696969}
+a:hover{color:#696969}
+a:active{color:#696969}
+
+.tech_items{
+    display: inline;
+    
+}
+
+
+.cursed {
+    height: min-content;
+    width: min-content
+}
