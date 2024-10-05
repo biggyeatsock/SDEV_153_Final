@@ -1,0 +1,5 @@
+1. Finish the main (index.html)
+2. Finish about me (myself.html)
+3. Finish work (work.html)
+4. Finish projects (projects.html)
+5. Definitely finish contact (contact.html)
