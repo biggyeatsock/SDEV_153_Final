@@ -11,56 +11,10 @@
 }
 
 .navbar {
-    /* background-color: #333; */
-    position: relative;
-    z-index: 999;
     text-align: center;
+    padding: 0.6em 0;
 }
 
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0; 
-}
-
-.navbar li {
-    display: inline-block;
-}
-
-.navbar li a {
-    color: #2d2d2d;
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    border-radius: 7px;
-    background-color: #bdbdbd;
-    z-index: 1;
-    min-width: 144px;
-}
-
-/* Style the dropdown menu */
-.navbar ul ul {
-    position: absolute;
-    top: 100%;
-    display: none;
-
-}
-
-.navbar ul ul li {
-    display: block;
-}
-
-
-
-.navbar li:hover ul {
-    display: block;
-}
-
-/* Change the background color of dropdown links on hover */
-.navbar ul ul li a:hover {
-    background-color: #555;
-}
 
 .header h1{
     text-align: center;
@@ -80,11 +34,48 @@ a:active{color:#696969}
 
 .tech_items{
     display: inline;
-    
+    margin: auto;
+    padding: auto;
 }
-
 
 .cursed {
     height: min-content;
     width: min-content
 }
+
+.section {
+    margin: auto;
+    padding: 1em;
+}
+
+.pagewrap {
+    margin: auto;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* For tablets and above */
+@media (min-width: 768px) {
+    nav ul li {
+        margin-right: 20px;
+    }
+    .container {
+        flex-direction: row;
+    }
+}
+
+/* For desktops and above */
+@media (min-width: 1024px) {
+    header {
+        padding: 20px;
+    }
+    section {
+        padding: 40px;
+    }
+}  
