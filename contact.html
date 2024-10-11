@@ -1,32 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="reset"" href="reset.css">
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" type="image/x-icon" href="cube.png" />
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="icon" type="image/x-icon" href="cube.png" />
+    </head>
 
-<div class="pagewrap">
-	<nav class="navbar"> 
-	<a href="index.html">Home</a>&nbsp;
-	<a href="myself.html">About me</a>&nbsp;
-	<a href="EDC.html">My nerd stuff</a>&nbsp;
-	<a href="projects.html">Projects</a>&nbsp;
-	<a href="work.html">My approach on work</a>&nbsp;
-	<a href="contact.html">Contact</a>&nbsp;
-</nav>
+    <div class="pagewrap">
+        <nav class="navbar">
+            <a href="index.html">Home</a>&nbsp;
+            <a href="myself.html">About me</a>&nbsp;
+            <a href="EDC.html">My nerd stuff</a>&nbsp;
+            <a href="projects.html">Projects</a>&nbsp;
+            <a href="work.html">My approach on work</a>&nbsp;
+            <a href="contact.html">Contact</a>&nbsp;
+        </nav>
 
+        <body>
+            <div class="section">
+                <h1 style="text-align: center">Want to work with me?</h1>
+                <p style="text-align: center">
+                    If you wish to work with me on a project. Fill out this form
+                    to let me know.
+                </p>
+                <div class="contact-form">
+                    <form>
+                        <div class="input-container">
+                            <label for="myName">* First Name: </label>
+                            <input
+                                type="text"
+                                id="myName"
+                                required
+                            /><br /><br />
 
+                            <label for="lastName">* Last Name: </label>
+                            <input
+                                type="text"
+                                id="lastName"
+                                required
+                            /><br /><br />
 
-<body>
-    <div class="section">
-		<h1>Want to work with me?</h1>
-		insert a form here
-	</div>
-</body>
-</div>
+                            <label for="emailaddy">* Email Address: </label>
+                            <input
+                                type="text"
+                                id="emailaddy"
+                                required
+                            /><br /><br />
 
+                            <label for="projectDetails"
+                                >* Project Details</label
+                            >
+                            <textarea
+                                id="projectDetails: "
+                                rows="2"
+                                cols="20"
+                                required
+                            ></textarea
+                            ><br />
+                        </div>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <script>
+                document
+                    .getElementById("contactForm")
+                    .addEventListener("submit", function (event) {
+                        event.preventDefault(); // Prevent the default form submission
+
+                        // Validate the form fields
+                        const firstName =
+                            document.getElementById("myName").value;
+                        const lastName =
+                            document.getElementById("lastName").value;
+                        const email =
+                            document.getElementById("emailaddy").value;
+                        const projectDetails =
+                            document.getElementById("projectDetails").value;
+
+                        // Simple validation checks
+                        if (!validateEmail(email)) {
+                            alert("Please enter a valid email address.");
+                            return;
+                        }
+
+                        if (firstName.length < 2 || lastName.length < 2) {
+                            alert(
+                                "First and Last Name must be at least 2 characters.",
+                            );
+                            return;
+                        }
+
+                        if (projectDetails.length < 10) {
+                            alert(
+                                "Project details must be at least 10 characters long.",
+                            );
+                            return;
+                        }
+
+                        // If all checks pass, simulate form submission
+                        const formData = new FormData(this);
+
+                        console.log(
+                            "Form data:",
+                            Object.fromEntries(formData.entries()),
+                        );
+                        alert("Form submitted successfully!");
+
+                        // Example: You can add a fetch request to submit data here
+                    });
+
+                // Email validation function
+                function validateEmail(email) {
+                    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return re.test(String(email).toLowerCase());
+                }
+            </script>
+        </body>
+    </div>
 </html>
